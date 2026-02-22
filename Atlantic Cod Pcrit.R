@@ -23,8 +23,8 @@ suppressPackageStartupMessages(
 )
 
 #read in data
-rawdata <- read_xlsx("C:/Users/bhoot/OneDrive - Deakin University/Shared Lab Space/K-berg 2025/pcrit_tidydata.xlsx", sheet = "master")
-metadata <- read_xlsx("C:/Users/bhoot/OneDrive - Deakin University/Shared Lab Space/K-berg 2025/pcrit_tidydata.xlsx", sheet = "meta")
+rawdata <- read_xlsx("pcrit_tidydata.xlsx", sheet = "master")
+metadata <- read_xlsx("pcrit_tidydata.xlsx", sheet = "meta")
 
 #calcSMR function
 calcSMR <- function(Y) {
@@ -104,7 +104,7 @@ ggplot(data = data3_subset, aes(x = PO2_mg_perL, y = MO2_mg_permin, color = fact
 ##########################################################################################
 
 # Set output directory
-output_figs <- "C:/Users/bhoot/OneDrive - Deakin University/Shared Lab Space/K-berg 2025/Cod pcrit plots"
+output_figs <- "Cod pcrit plots"
 setwd(output_figs)
 
 fish_dfs <- split(data3_subset, data3_subset$ID_fish)
@@ -152,11 +152,6 @@ data5 <- data4 %>%
   distinct(ID_fish, .keep_all = TRUE)
 
 data4_subset <- data4[!data4$ID_fish %in% c("A2_20h_2", "B1_20h_2", "B2_20h_2"), ]
-
-output_dir <- "C:/Users/bhoot/OneDrive - Deakin University/Shared Lab Space/K-berg 2025"
-setwd(output_dir)
-
-write.csv(data5, file = "pcrit_results.csv", col.names = TRUE, row.names = FALSE)
 
 ###########################
 # Pcrit visual assessment 
