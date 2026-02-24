@@ -169,7 +169,7 @@ ggplot(data = data4_subset, aes(x = PO2_mg_perL, y = MO2_mg_permin, color = fact
   scale_color_manual(values = c("cadetblue3", "skyblue3", "pink", "coral1"))+
   geom_text(aes(x = 6.5, y = 0.1, label = paste(mass, "g")),
             hjust = 0.5, vjust = 0, size = 3, color = "black", show.legend = FALSE) +
-  labs(x = "Tank PO2 (mg/L)", y = "Metabolic Rate (mgO2/min)", color = "Temp (degC)")
+  labs(x = "PO2 (mg/L)", y = "Metabolic Rate (mgO2/min)", color = "Temp (degC)")
 
 #by treatment, with MMR, RMR, SMR, and pcrit indicated:
 
@@ -185,7 +185,7 @@ Figure1 <- ggplot(data = subset(data4_subset, Treatment == "15_norm"), aes(x = P
   scale_x_reverse() +
   geom_text(aes(x = 6.5, y = 0.1, label = paste(mass, "g")),
             hjust = 0.5, vjust = 0, size = 3, color = "black", show.legend = FALSE) +
-  labs(x = expression(Tank~PO[2]~(mg~O[2]~l^{-1})), 
+  labs(x = expression(PO[2]~(mg~O[2]~l^{-1})), 
        y = expression(Metabolic~rate~(mg~O[2]~min^{-1})))
 
 #15C hyperoxia
@@ -200,7 +200,7 @@ Figure2 <- ggplot(data = subset(data4_subset, Treatment == "15_hyper"), aes(x = 
   scale_x_reverse() +
   geom_text(aes(x = 6.5, y = 0.1, label = paste(mass, "g")),
             hjust = 0.5, vjust = 0, size = 3, color = "black", show.legend = FALSE) +
-  labs(x = expression(Tank~PO[2]~(mg~O[2]~l^{-1})), 
+  labs(x = expression(PO[2]~(mg~O[2]~l^{-1})), 
        y = expression(Metabolic~rate~(mg~O[2]~min^{-1})))
 
 #20C normoxia
@@ -215,7 +215,7 @@ Figure3 <- ggplot(data = subset(data4_subset, Treatment == "20_norm"), aes(x = P
   scale_x_reverse() +
   geom_text(aes(x = 6.5, y = 0.1, label = paste(mass, "g")),
             hjust = 0.5, vjust = 0, size = 3, color = "black", show.legend = FALSE) +
-  labs(x = expression(Tank~PO[2]~(mg~O[2]~l^{-1})), 
+  labs(x = expression(PO[2]~(mg~O[2]~l^{-1})), 
        y = expression(Metabolic~rate~(mg~O[2]~min^{-1})))
 
 #20C hyperoxia
@@ -230,7 +230,7 @@ Figure4 <- ggplot(data = subset(data4_subset, Treatment == "20_hyper"), aes(x = 
   scale_x_reverse() +
   geom_text(aes(x = 6.5, y = 0.1, label = paste(mass, "g")),
             hjust = 0.5, vjust = 0, size = 3, color = "black", show.legend = FALSE) +
-  labs(x = expression(Tank~PO[2]~(mg~O[2]~l^{-1})), 
+  labs(x = expression(PO[2]~(mg~O[2]~l^{-1})), 
        y = expression(Metabolic~rate~(mg~O[2]~min^{-1})))
 
 ####################
